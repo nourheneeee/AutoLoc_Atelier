@@ -1,13 +1,12 @@
 package tn.esprit.tpfoyer.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "equipement")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,4 +18,7 @@ public class Equipement {
     private Long idEquipement;
 
     private String libelle;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Set<Vehicule> vehicules = new HashSet<>();
 }
