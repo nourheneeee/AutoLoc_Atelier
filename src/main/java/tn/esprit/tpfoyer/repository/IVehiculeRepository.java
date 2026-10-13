@@ -1,7 +1,7 @@
 package tn.esprit.tpfoyer.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import tn.esprit.tpfoyer.domain.Vehicule;
 
-public interface IVehiculeRepository extends CrudRepository<Vehicule, Long> {
+public interface IVehiculeRepository extends JpaRepository<Vehicule, Long> {
 }
